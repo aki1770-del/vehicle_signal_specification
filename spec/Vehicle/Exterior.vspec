@@ -53,6 +53,22 @@ RoadSurfaceCondition:
     Primary consumers: navigation and ADAS safety systems.
     Related to VSS issue #877 (Connected Safety signals).
 
+RoadSurfaceTemperature:
+  datatype: float
+  type: sensor
+  unit: Celsius
+  description: Temperature of the road surface ahead of or beneath the vehicle.
+  comment: >
+    Distinct from Vehicle.Exterior.AirTemperature: the road surface can be
+    several degrees colder than the air (for example on bridge decks and in
+    shaded cuttings), so this is the determining signal for black-ice risk when
+    the air temperature reads above freezing while the road is still frozen.
+    May be sourced from infrastructure road-weather stations or from onboard
+    infrared road-surface sensors, and is a primary input to the
+    Vehicle.Exterior.RoadSurfaceCondition assessment.
+    Primary consumers: navigation and ADAS safety systems.
+    Related to VSS issue #877 (Connected Safety signals).
+
 RoadSurfaceContaminant:
   datatype: uint8
   type: sensor
